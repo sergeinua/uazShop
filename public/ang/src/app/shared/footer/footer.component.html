@@ -1,0 +1,232 @@
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5">
+        <div class="footer-contacts mb-25">
+          <div class="h3 fs-20 fw-5">Контакты</div>
+          <ul class="fs-13">
+            <li>432045, Россия, г.Ульяновск,</li>
+            <li>Московское шоссе, 36</li>
+            <li>Телефон: +7 (8422) 750-565</li>
+            <li>Факс: +7 (8422) 348-161</li>
+            <li>Email: shop@auto-kan.ru</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-2 col-md-2 col-sm-6 col-mxs-6">
+        <div class="h3 fs-20 fw-5">Компания</div>
+        <ul class="list-unstyled fs-13">
+          <li><a class="white h_size" href="/abouth/">О магазине</a></li>
+          <li><a class="white h_size" href="/delivery/">Доставка</a></li>
+          <li><a class="white h_size" href="/payment/">Оплата</a></li>
+          <li><a class="white h_size" href="/purchase/">Как купить</a></li>
+          <li><a class="white h_size" href="/warranty/">Гарантия</a></li>
+          <li><a class="white h_size" href="/contacts/">Контакты</a></li>
+          <li><a class="white h_size" href="/banking-details/">Реквизиты</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-2 col-md-2 col-sm-6 col-mxs-6">
+        <div class="h3 fs-20 fw-5">Личный кабинет</div>
+        <ul class="list-unstyled fs-13">
+          <li><a class="white h_size" href="/my/profile/">Мой профиль</a></li>
+          <li><a class="white h_size" href="/my/orders/">Мои заказы</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-3 col-md-3 col-sm-6 col-mxs-12 widgets">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12"></div>
+    </div>
+  </div>
+</div>
+<div class="copyright">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        copyright
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<button id="back-top" class="mdl-button mdl-js-button mdl-button--fab" type="button"><i class="material-icons">keyboard_arrow_up</i>
+</button>
+<div id="added" class="added hidden-xs">
+  <div class="added-inner">Добавлен в <a href="javascript:void(0)" class="message"></a><a href="javascript:void(0)"
+                                                                                          class="cancel">Отмена</a>
+    <button class="added-close"></button>
+  </div>
+</div>
+<div id="info" class="added hidden-xs">
+  <div class="added-inner"><span class="message"></span>
+    <button class="added-close"></button>
+  </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><i
+          class="material-icons">close</i></span><span class="sr-only">Close</span></button>
+        <span class="modal-title" id="loginLabel">Войти</span></div>
+      <div class="modal-body">
+        <div class="authform">
+          <form action="/login/" method="post">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><input
+              class="mdl-textfield__input" type="text" name="login" id="frmlogin-email"/><label
+              class="mdl-textfield__label" for="frmlogin-email">Email</label></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><input
+              class="mdl-textfield__input" type="text" name="password" id="frmlogin-password"/><label
+              class="mdl-textfield__label" for="frmlogin-password">Пароль</label></div>
+            <input type="hidden" name="wa_auth_login" value="1">
+            <button class="btn-block btn-theme mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                    type="submit">Войти
+            </button>
+            <p>Впервые на auto-kan.ru? <a href="/signup/" data-signup="1" rel="nofollow">Зарегистрируйтесь
+              сейчас</a></p></form>
+        </div>
+      </div>
+      <div class="modal-footer"><a href="javascript:void(0);" class="mdl-button mdl-js-button mdl-button--primary"
+                                   data-forgot="1">Забыли пароль?</a></div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><i
+          class="material-icons">close</i></span><span class="sr-only">Close</span></button>
+        <span class="modal-title" id="signupLabel">Регистрация</span></div>
+      <div class="modal-body">
+        <div class="authform">
+          <form action="/signup/" method="post">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><input
+              class="mdl-textfield__input" type="text" name="data[firstname]"
+              id="frmsignup-name"/><label class="mdl-textfield__label"
+                                          for="frmsignup-name">Имя</label></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><input
+              class="mdl-textfield__input" type="text" name="data[lastname]" id="frmsignup-lastname"/><label
+              class="mdl-textfield__label" for="frmsignup-lastname">Фамилия</label></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><input
+              class="mdl-textfield__input" type="text" name="data[email]" id="frmsignup-email"/><label
+              class="mdl-textfield__label" for="frmsignup-email">Email</label></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><input
+              class="mdl-textfield__input" type="password" name="data[password]"
+              id="frmsignup-password"/><label class="mdl-textfield__label" for="frmsignup-password">Пароль</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><input
+              class="mdl-textfield__input" type="password" name="data[password_confirm]"
+              id="frmsignup-confirm"/><label class="mdl-textfield__label" for="frmsignup-confirm">Подтвердите
+              пароль</label></div>
+            <button class="btn-block btn-theme mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                    type="submit">Зарегистрироваться
+            </button>
+            <p>Уже зарегистрированны? Нажмите <a href="/login/" data-auth="1" rel="nofollow">Войти</a>,
+              чтобы зайти в свой аккаунт</p></form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="forgotLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><i
+          class="material-icons">close</i></span><span class="sr-only">Close</span></button>
+        <span class="modal-title" id="forgotLabel">Забыли пароль?</span></div>
+      <div class="modal-body">
+        <div class="authform">
+          <form action="/forgotpassword/" method="post">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><input
+              class="mdl-textfield__input" type="text" name="login" id="frmforgot-login"/><label
+              class="mdl-textfield__label" for="frmforgot-login">Email</label></div>
+            <button class="btn-block btn-theme mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                    type="submit">Сбросить пароль
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer"><a href="javascript:void(0);" class="mdl-button mdl-js-button mdl-button--primary"
+                                   data-auth="1">Я вспомнил пароль!</a></div>
+    </div>
+  </div>
+</div>
+<div class="modal modal-product fade" id="product-overview" tabindex="-1" role="dialog" aria-labelledby="overviewLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header"><a href="#" class="ov-link mdl-button mdl-js-button">Страница продукта</a>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><i
+          class="material-icons">close</i></span><span class="sr-only">Close</span></button>
+        <div><span class="modal-title" id="overviewLabel"></span></div>
+      </div>
+      <div class="modal-body product-page fs-13">
+        <div class="row">
+          <div class="col-xs-7 ov-info"></div>
+          <div class="col-xs-5 ov-image"><img
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            alt="gif pixel"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal-product fade" id="product-quickview" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header"><a href="#" class="ov-link mdl-button mdl-js-button">Страница продукта</a>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><i
+          class="material-icons">close</i></span><span class="sr-only">Close</span></button>
+      </div>
+      <div class="modal-body product-page fs-13"></div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-bordered">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><i
+            class="material-icons">close</i></span><span class="sr-only">Close</span></button>
+          <span class="modal-title" id="feedbackLabel">Обратная связь</span></div>
+      </div>
+      <div class="modal-body">
+        <div class="authform">
+          <form action="/feedback/" method="post">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><input
+              class="mdl-textfield__input" type="text" name="name" id="frmfeed-name"/><label
+              class="mdl-textfield__label" for="frmfeed-name">Имя</label></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><input
+              class="mdl-textfield__input" type="email" name="email" id="frmfeed-email"/><label
+              class="mdl-textfield__label" for="frmfeed-email">Email</label></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><textarea name="body"
+                                                                                                class="mdl-textfield__input"
+                                                                                                id="frmfeed-text"></textarea><label
+              class="mdl-textfield__label" for="frmfeed-text">Сообщение</label></div>
+            <div class="wa-captcha">
+              <p>
+                <strong>&rarr;</strong>
+                <input type="text" name="captcha" class="wa-captcha-input" autocomplete="off">
+              </p>
+              <p>
+                <a href="#" class="wa-captcha-refresh">Обновить капчу (CAPTCHA)</a>
+              </p>
+
+            </div>
+            <input name="send" type="submit" value="Отправить" class="btn-block"></form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

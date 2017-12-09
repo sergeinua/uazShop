@@ -1,0 +1,135 @@
+body.boxed-layout {
+    background-position: top;
+}
+.header .navbar-categories .navbar-nav > li > a {
+    color: #ffffff !important;
+}
+
+.theme-c, .header-style-color .cart .material-icons:after, .megamenu .dropdown-menu a:hover, .service-v8 .service:hover .h4, .star:after, .star-empty:after, .star-full:after, .star-half:after, .product-list .additional-buttons .active i, .product-list .additional-buttons .active, .product-list.thumbs .addtocart > button, .product-list-v3.thumbs .h5, .maintext li .fa, .product-links .active, .mdl-button--primary, .heading-v6 h1, .heading-v6 .h1, .heading-v6 h2, .heading-v6 .h2, .sidebar-plugins .brands a:hover {
+    color: #006644 !important;
+}
+
+.theme-c:hover, .cart .material-icons:hover:after, .megamenu .dropdown-menu a:hover, .service-v8 .service:hover .h4:hover, .star:hover:after, .star-empty:hover:after, .star-full:hover:after, .star-half:hover:after, .product-list .additional-buttons .active i:hover, .product-list .additional-buttons .active:hover, .product-list.thumbs .addtocart > button:hover, .product-list-v3.thumbs .h5:hover, .maintext li .fa:hover, .product-links .active:hover, .mdl-button--primary:hover, .heading-v6 h1:hover, .heading-v6 .h1:hover, .heading-v6 h2:hover, .heading-v6 .h2:hover {
+    color: #388e3c;
+}
+
+.theme-c-h:hover {
+    color: #006644;
+}
+
+.theme-c-ni, a {
+    color: #006644;
+}
+
+.theme-c-ni:hover, a:hover {
+    color: #388e3c;
+}
+
+.theme-sc, .logo span, .service-v1 a:hover i, .service-v3 .service:hover i, .service-v4 a:hover i, .service-v4 a:hover .h4, .service-v6 a:hover .h4, .service-v7 .service i, .affix-menu .material-icons:after {
+    color: #006644;
+}
+
+.theme-bg, .header-style-color, .header-style-color .navbar-theme, .header-style-color .search-theme .mdl-textfield, .header-style-color .flexMenu-search .mdl-textfield, .tags a:hover, .checkout-step.done h2, .mdl-button--raised.mdl-button--colored, .copyright-theme, .badge-theme, .mdl-textfield__label:after, .mdl-checkbox__ripple-container .mdl-ripple, .btn-theme, .service-v2 .service:hover i, .service-v8 .service:hover .icon-wrapper, ul.list li .addtocart > button, .parallax-v2 .da-dots span.da-dots-current, .category-sorting .selected a, .filters .ui-widget-header, .filters .ui-widget-content .ui-state-default, input[type=button], input[type=submit], .cart .affix {
+    background-color: #006644 !important;
+}
+
+.theme-bg-ni, .modal-theme .modal-header, .product-page .options .inline-select .selected, .mdl-radio__inner-circle, .mdl-radio__ripple-container .mdl-ripple {
+    background-color: #006644;
+}
+
+.theme-bg-d, .header-style-color .navbar-theme.nb-dark, .header-style-color .navigation, .heading-v5:after {
+    background-color: #388e3c !important;
+}
+
+.theme-bg-t, .product-list-v1 li .quickoverview {
+    background-color: rgba(76, 175, 80, .7) !important;
+}
+
+.theme-bg-h {
+    background-color: #006644;
+}
+
+.theme-bg-h:hover {
+    background-color: #388e3c;
+}
+
+.theme-sbg, .header-v11 #cart, .header-v12 #cart, .service-v5 .service:hover i, .service-v7 .service:hover i, .service-v7 .service .h4:after, .product-list-v2.thumbs .product-item-inner, .product-list-v6.thumbs .prices, .md-pagination .selected, .usermenu .active .badge, .owl-page.active span, .mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--fab, .mdl-button--fab.mdl-button--colored {
+    background-color: #006644 !important;
+}
+
+.theme-sbg-d, .header-v10 .navbar-categories {
+    background-color: #00796b;
+}
+
+.theme-sbg-t, .product-list-v2 .quickoverview {
+    background-color: rgba(0, 150, 136, .7) !important;
+}
+
+.theme-sbg-h {
+    background-color: #006644;
+}
+
+.theme-sbg-h:hover {
+    background-color: #00796b;
+}
+
+.theme-bc, .heading-v1 h1, .heading-v1 .h1, .heading-v1 h2, .heading-v1 .h2, .heading-v3 h1, .heading-v3 .h1, .heading-v3 h2, .heading-v3 .h2, .wa-captcha .wa-captcha-input:focus, .header-v10 .dropdown-menu, .header-v10 .navbar-default .flexMenu-popup, .my-nav .active a, .service-v8 .service:hover .icon-wrapper, .service-v8 .service:hover .icon-wrapper:before, .service-v8 .service:hover .icon-wrapper:after, blockquote:hover, .parallax-v2 .da-dots span, .filters .slider input:focus, .product-page .options .inline-select .selected, ul.md-tabs > li.active > a, ul.md-tabs > li.active > a:hover, ul.md-tabs > li.active > a:active, ul.md-tabs > li > a:hover, .wa-value input[type=text]:focus, .wa-value input[type=email]:focus, .wa-value input[type=password]:focus, .wa-value textarea:focus, .md-input:focus, .mdl-radio.is-checked .mdl-radio__outer-circle, .about:hover hr {
+    border-color: #006644 !important;
+}
+
+.theme-bc-d, .filters .ui-widget-content .ui-state-default {
+    border-color: #388e3c;
+}
+
+.theme-sbc, .header .dropdown-menu, .navbar-default .flexMenu-popup, .navbar-pages .navbar-nav > .active, .navbar-categories .navbar-nav li:hover, .sidebar-nav .megamenu .dropdown-menu, .sidebar-nav .dropdown-submenu .dropdown-menu, .header-v9 ul .dropdown-menu, .service-v5 .service:hover i:after, .service-v7 .service i:after, .filters .feature-value:hover {
+    border-color: #006644 !important;
+}
+
+.theme-sbc-d, .navbar-pages .navbar-nav li:hover {
+    border-color: #00796b !important;
+}
+
+a.theme-sc:hover, .service-v4 a:hover a.h4:hover, .service-v6 a:hover a.h4:hover, .affix-menu a.material-icons:hover:after {
+    color: #00796b;
+}
+
+.star-hover:after {
+    color: #388e3c;
+}
+
+.sidebar-nav .list-group-item.active > a {
+    border-left-color: #006644;
+}
+
+#compare-table > tbody > tr:hover {
+    border-left-color: #006644;
+}
+
+.color-dark .theme-bg, .color-dark .header-style-color .header-content a, .color-dark .service-v2 .service:hover i, .color-dark .service-v8 .service:hover i, .color-dark .copyright.copyright-theme, .color-dark .modal-theme .modal-header, .color-dark .modal-theme .close, .color-dark .btn-theme, .color-dark .btn-theme:hover, .color-dark input[type=button], .color-dark input[type=submit], .color-dark input[type=button]:hover, .color-dark input[type=submit]:hover, .color-dark .quick-button, .color-dark .quick-button:focus, .color-dark .quick-button:hover, .color-dark .tags a:hover, .color-dark ul.list .product-item .addtocart > button, .color-dark .checkout-step.done a, .copyright.copyright-theme, .copyright.copyright-theme a, .header-style-color .navbar-theme .navbar-nav > li > a, .cart .affix, .home-subscribe .mdl-textfield__input, .home-subscribe .mdl-textfield__label, .home-subscribe .mdl-textfield--floating-label.is-focused .mdl-textfield__label, .home-subscribe button, .home-subscribe p {
+    color: #fff !important;
+}
+
+.home-subscribe .mdl-textfield__input {
+    border-bottom-color: #424242;
+}
+
+.color-dark .header-style-color, .color-dark .header-style-color a {
+    color: #424242;
+}
+
+.header-style-color .header-content .search .btn-default, .header-style-color .header-content .search .form-control {
+    background: rgba(0, 0, 0, .16);
+}
+
+.tags a {
+    background: #424242;
+}
+
+.checkout-step h2 {
+    background: #eee;
+}
+
+.footer {
+    background: #1c252c;
+    color: #fff;
+}

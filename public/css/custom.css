@@ -1,0 +1,12 @@
+.btn-cancel {
+    margin-right: 20px;
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+.unread-message {
+    background-color: red!important;
+    color: white!important;
+}

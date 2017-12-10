@@ -6,7 +6,7 @@ import { CategoryComponent } from './category/category.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: '/category/:categoryId', component: CategoryComponent },
+  { path: 'category/:categoryId', component: CategoryComponent },
   { path: '**', component: HomeComponent }
 ];
 

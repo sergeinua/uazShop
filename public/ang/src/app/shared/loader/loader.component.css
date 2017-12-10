@@ -1,0 +1,42 @@
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:host /deep/ .loading-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+:host /deep/ .loading-overlay.has-parent {
+  position: absolute;
+}
+
+:host /deep/ .spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+:host /deep/ .spinner::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  border-right: 8px solid transparent;
+  animation: spinner 0.8s linear infinite;
+  will-change: transform;
+}

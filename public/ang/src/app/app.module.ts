@@ -9,7 +9,6 @@ import { reducers } from './redux/reducers/app.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
-import { CategoryModule } from './category/category.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -49,10 +48,9 @@ import { LoaderComponent } from './shared/loader/loader.component';
      * See: https://github.com/zalmoxisus/redux-devtools-extension
      */
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    HomeModule,
-    CategoryModule,
+    HomeModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -13,12 +13,14 @@ import { storeFreeze } from 'ngrx-store-freeze';
  * notation packages up all of the exports into a single object.
  */
 import * as fromLoader from './loader.reducer';
+import * as fromCategory from './category.reducer';
 /**
  * As mentioned, we treat each reducer like a table in a database. This means
  * our top level state interface is just a map of keys to inner state types.
  */
 export interface State {
   loader: fromLoader.State;
+  category: fromCategory.State;
 }
 /**
  * Our state is composed of a map of action reducer functions.
@@ -26,7 +28,8 @@ export interface State {
  * and the current or initial state and return a new immutable state.
  */
 export const reducers = Object.assign({}, {
-    loader: fromLoader.reducer
+    loader: fromLoader.reducer,
+    category: fromCategory.reducer
   }
 );
 // console.log all actions
@@ -49,3 +52,6 @@ export const metaReducers: any = !environment.production
 
 export const getLoaderState = (state: State) => state.loader;
 export const loaderIsVisible = createSelector(getLoaderState, fromLoader.getLoaderState);
+
+export const getCategoryState = (state: State) => state.category;
+export const getCategoriesForHomePage = createSelector(getCategoryState, fromCategory.getCategoriesForHomePage);

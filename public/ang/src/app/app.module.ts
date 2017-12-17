@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { HttpClientModule } from '@angular/common/http';
 
 import { environment } from '../environments/environment';
 import { reducers } from './redux/reducers/app.reducer';
@@ -14,6 +15,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { AppService } from './core/app.service';
 
 @NgModule({
   declarations: [
@@ -48,9 +50,10 @@ import { LoaderComponent } from './shared/loader/loader.component';
      * See: https://github.com/zalmoxisus/redux-devtools-extension
      */
     !environment.production ? StoreDevtoolsModule.instrument() : [],
+    HttpClientModule,
     HomeModule
   ],
-  providers: [],
+  providers: [ AppService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

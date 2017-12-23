@@ -27,11 +27,10 @@ export interface State {
  * These reducer functions are called with each dispatched action
  * and the current or initial state and return a new immutable state.
  */
-export const reducers = Object.assign({}, {
-    loader: fromLoader.reducer,
-    category: fromCategory.reducer
-  }
-);
+export const reducers: ActionReducerMap<State> = {
+  loader: fromLoader.reducer,
+  category: fromCategory.reducer
+};
 // console.log all actions
 export function logger(reducer: ActionReducer<State>): ActionReducer<State> {
   return function (state: State, action: any): State {

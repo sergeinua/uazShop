@@ -13,10 +13,14 @@ export class AppService {
   }
 
   getCategoryProducts(categoryId): Observable<any> {
-    return this.http.get(`/api/category/${categoryId}`);
+    return this.http.get(`/api/category/${categoryId}/products`);
   }
 
   getProductData(productId): Observable<any> {
     return this.http.get(`/api/product/${productId}`);
+  }
+
+  getCategoryData(categoryId): Observable<any> {
+    return this.http.get(`/api/category/${categoryId}`)
   }
 }

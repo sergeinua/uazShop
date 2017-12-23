@@ -15,7 +15,8 @@ import { AppService } from '../core/app.service';
 export class ProductComponent implements OnInit {
   product: any = null;
 
-  constructor(private appService: AppService, private store: Store<rootReducer.State>, private activatedRoute: ActivatedRoute) {
+  constructor(private appService: AppService, private store: Store<rootReducer.State>,
+              private activatedRoute: ActivatedRoute) {
     activatedRoute.params.subscribe((params: Params) => this.loadData(params['productId']));
   }
 

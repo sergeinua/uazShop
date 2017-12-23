@@ -10,6 +10,18 @@ router.get('/api/category/home', function (req, res, err) {
     });
 });
 
+router.get('/api/category/:categoryId', function (req, res, err) {
+    db.get('select * from category where id=' + req.params.categoryId, function(err, row){
+        res.status(200).send(JSON.stringify(row));
+    });
+});
+
+router.get('/api/category/:categoryId/products', function (req, res, err) {
+    db.all('select * from product where categoryId=' + req.params.categoryId, function(err, row){
+        res.status(200).send(JSON.stringify(row));
+    });
+});
+
 router.get('/api/product/:productId', function (req, res, err) {
     db.get('select * from product where id=' + req.params.productId, function(err, row){
         res.status(200).send(JSON.stringify(row));

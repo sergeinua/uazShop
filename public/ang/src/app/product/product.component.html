@@ -1,3 +1,102 @@
-<p>
-  product works!
-</p>
+<div class="main content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 sidebar">
+        <div id="page-content" itemscope="" itemtype="http://schema.org/WebPage">
+          <div class="no-sb-padded">
+            <div itemscope="" itemtype="http://schema.org/Product" class="product-v4 fs-13 clearfix">
+              <div class="product-page">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="product-gallery gallary-v3">
+                      <div class="image mb-20">
+                        <div class="corner top left"></div>
+                        <a href="{{product?.imageUrl}}" class="swipebox"
+                           title="{{product?.title}}">
+                          <img itemprop="image"
+                               class="img-responsive"
+                               id="product-image"
+                               alt="{{product?.title}}"
+                               title="{{product?.title}}"
+                               src="{{product?.imageUrl}}"
+                               width="424"
+                               height="283">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="product-links mb-10"></div>
+                    <div class="product-header mb-20">
+                      <h1>
+                        <span itemprop="name">{{product?.title}}</span>
+                      </h1>
+                    </div>
+                    <div class="product-links">
+                      <ul class="list-unstyled list-inline">
+                        <li>
+                          <a href="javascript:void(0)" class="favourite" data-product="1" title="Добавить в избранное">
+                            <span class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton"><i
+                              class="material-icons">favorite</i></span>
+                            Избранное
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <hr>
+                    <div class="mb-20">
+                      <form id="cart-form" method="post" action="/cart/add/">
+                        <div class="purchase">
+                          <div class="add2cart">
+                            <div class="product-prices">
+                              <span data-price="3120" class="price nowrap">{{product?.price}}<span
+                                class="ruble"> Грн.</span></span>
+                            </div>
+                            <div class="stocks mb-20">
+                              <div class="sku-1-stock">
+                                <strong class="stock-high grey">
+                                  <i class="theme-bg"></i><i class="theme-bg"></i><i class="theme-bg"></i>
+                                  <span class="stock-name"></span> В наличии
+                                </strong>
+                              </div>
+                            </div>
+                            <input type="hidden" name="product_id" value="1">
+                            <div class="row mb-10">
+                              <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="input-group qty">
+                                  <span class="input-group-btn">
+                                    <a href="javascript:void(0)" class="btn btn-default minus">—</a>
+                                  </span>
+                                  <span class="qty-input">
+                                    <input type="text" name="quantity" class="form-control" value="1">
+                                  </span>
+                                  <span class="input-group-btn">
+                                    <a href="javascript:void(0)" class="btn btn-default plus">+</a>
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="col-xs-6 col-sm-6 col-md-6">
+                                <input type="submit" value="Купить">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="aux"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-content fs-14 mb-20" id="product-tabs">
+                <div id="overview" class="tab-pane fade in active">
+                  <div class="description" id="product-description" itemprop="description">{{product?.description}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

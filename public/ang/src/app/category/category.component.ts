@@ -4,6 +4,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 import * as rootReducer from '../redux/reducers/app.reducer';
 import * as loaderActions from '../redux/actions/loader.actions';
+import * as categoryActions from '../redux/actions/category.actions';
 
 import { AppService } from '../core/app.service';
 import { Observable } from 'rxjs/Observable';
@@ -21,6 +22,8 @@ export class CategoryComponent implements OnInit {
   constructor(private store: Store<rootReducer.State>, private activatedRoute: ActivatedRoute,
               private appService: AppService) {
     activatedRoute.params.subscribe((params: Params) => this.loadData(params['categoryId']));
+    store.select(rootReducer.getCategoryData).subscribe(resp => this.category = resp);
+    store.select(rootReducer.getCategoryProducts).subscribe(resp => this.products = resp);
   }
 
   ngOnInit() {
@@ -32,8 +35,8 @@ export class CategoryComponent implements OnInit {
       catProdObs = this.appService.getCategoryProducts(categoryId);
     Observable.combineLatest(catDataObs, catProdObs).subscribe(
       (resp) => {
-        this.category = resp[0];
-        this.products = resp[1];
+        this.store.dispatch(new categoryActions.CategoryDataLoadedAction(resp[0]));
+        this.store.dispatch(new categoryActions.CategoryProductsLoadedAction(resp[1]));
         this.store.dispatch(new loaderActions.LoaderSetStateAction(false));
       },
       (err) => {

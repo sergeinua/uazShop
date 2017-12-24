@@ -14,6 +14,7 @@ import { storeFreeze } from 'ngrx-store-freeze';
  */
 import * as fromLoader from './loader.reducer';
 import * as fromCategory from './category.reducer';
+import * as fromCart from './cart.reducer';
 /**
  * As mentioned, we treat each reducer like a table in a database. This means
  * our top level state interface is just a map of keys to inner state types.
@@ -21,6 +22,7 @@ import * as fromCategory from './category.reducer';
 export interface State {
   loader: fromLoader.State;
   category: fromCategory.State;
+  cart: fromCart.State;
 }
 /**
  * Our state is composed of a map of action reducer functions.
@@ -29,7 +31,8 @@ export interface State {
  */
 export const reducers: ActionReducerMap<State> = {
   loader: fromLoader.reducer,
-  category: fromCategory.reducer
+  category: fromCategory.reducer,
+  cart: fromCart.reducer
 };
 // console.log all actions
 export function logger(reducer: ActionReducer<State>): ActionReducer<State> {
@@ -56,3 +59,8 @@ export const getCategoryState = (state: State) => state.category;
 export const getCategoriesForHomePage = createSelector(getCategoryState, fromCategory.getCategoriesForHomePage);
 export const getCategoryData = createSelector(getCategoryState, fromCategory.getCategoryData);
 export const getCategoryProducts = createSelector(getCategoryState, fromCategory.getProducts);
+
+export const getCartState = (state: State) => state.cart;
+export const getCartItems = createSelector(getCartState, fromCart.getItems);
+export const getCartQuantity = createSelector(getCartState, fromCart.getQuantity);
+export const getCartAmount = createSelector(getCartState, fromCart.getAmount);

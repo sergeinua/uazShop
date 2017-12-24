@@ -4,6 +4,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Store } from '@ngrx/store';
 import * as rootReducer from '../redux/reducers/app.reducer';
 import * as loaderActions from '../redux/actions/loader.actions';
+import * as cartActions from '../redux/actions/cart.actions';
 
 import { AppService } from '../core/app.service';
 

@@ -1,0 +1,23 @@
+<div data-spy="affix" data-offset-top="200" id="cartAffix">
+  <a routerLink="/cart/" id="cart" class="rounded-sm">
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    <span class="cart-count">{{quantity}}</span> товар(ов) - <span class="cart-total">{{amount}} <span
+    class="ruble">Грн.</span></span>
+  </a>
+  <div id="flying-cart" class="empty">
+    <div class="flyingCart-content">
+    </div>
+    <div class="flyingCart-summary">
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="fs-13"><span class="grey">Итого</span>: <span
+            class="bold fs-14 cart-total">0 <span
+            class="ruble">Р</span></span></p>
+          <a routerLink="/cart/"
+             class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent btn-block">Перейти
+            в корзину</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -16,6 +16,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { AppService } from './core/app.service';
+import { CartComponent } from './shared/header/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AppService } from './core/app.service';
     HeaderComponent,
     FooterComponent,
     LoaderComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

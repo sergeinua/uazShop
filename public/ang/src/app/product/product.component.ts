@@ -15,6 +15,7 @@ import { AppService } from '../core/app.service';
 })
 export class ProductComponent implements OnInit {
   product: any = null;
+  quantity: number = 1;
 
   constructor(private appService: AppService, private store: Store<rootReducer.State>,
               private activatedRoute: ActivatedRoute) {
@@ -35,5 +36,19 @@ export class ProductComponent implements OnInit {
         this.store.dispatch(new loaderActions.LoaderSetStateAction(false));
       }
     );
+  }
+
+  handleAddToCart() {
+    this.store.dispatch(new cartActions.CartProductAddAction({item: this.product, quantity: this.quantity}));
+  }
+
+  handleIncreaseQuan() {
+    this.quantity++;
+  }
+
+  handleDecreaseQuan() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
   }
 }

@@ -5,6 +5,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import * as rootReducer from '../redux/reducers/app.reducer';
 import * as loaderActions from '../redux/actions/loader.actions';
 import * as categoryActions from '../redux/actions/category.actions';
+import * as cartActions from '../redux/actions/cart.actions';
 
 import { AppService } from '../core/app.service';
 import { Observable } from 'rxjs/Observable';
@@ -43,5 +44,9 @@ export class CategoryComponent implements OnInit {
         this.store.dispatch(new loaderActions.LoaderSetStateAction(false));
       }
     );
+  }
+
+  handleAddToCart(product) {
+    this.store.dispatch(new cartActions.CartProductAddAction({ item: product, quantity: 1 }));
   }
 }

@@ -89,12 +89,11 @@
                           <span class="price nowrap">{{product?.price}}<span class="ruble"> Грн.</span></span>
                         </div>
                         <div class="stock visible-list">
-                          1 В наличии
+                          В наличии
                         </div>
-                        <meta itemprop="price" content="10,8">
-                        <meta itemprop="priceCurrency" content="UAH">
                         <input name="product_id" value="1626" type="hidden">
-                        <button type="submit"
+                        <button type="button"
+                                (click)="handleAddToCart(product)"
                                 class="mdl-button mdl-js-button mdl-button--fab theme-sbg-h"
                                 data-upgraded=",MaterialButton">
                           <i class="material-icons">add_shopping_cart</i>

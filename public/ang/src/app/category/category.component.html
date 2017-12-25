@@ -55,11 +55,10 @@
               <ul class="product-list product-list-v7 thumbs clearfix col1">
                 <li *ngFor="let product of products" temtype="http://schema.org/Product" class="clearfix product-item">
                   <div class="product-item-inner md-card">
-                    <a routerLink="{{'/product/' + product?.id}}" title="{{product?.description}}" class="product-link">
+                    <a routerLink="{{'/product/' + product?.id}}" class="product-link">
                       <div class="image-wrapper">
                         <div class="image">
                           <img itemprop="image" alt="{{product?.description}}"
-                               title="Г{{product?.description}}"
                                src="{{product?.imageUrl}}"
                                width="190" height="171">
                           <span class="align-helper"></span>
@@ -79,7 +78,7 @@
                       </div>
                     </a>
                     <div itemprop="offers" class="offers" itemscope="" itemtype="http://schema.org/Offer">
-                      <form class="purchase addtocart" method="post" action="/cart/add/">
+                      <div class="purchase addtocart">
                         <div class="prices clearfix">
                           <span class="rating nowrap visible-thumbs-inline">
                             <i class="icon12 star-empty"></i>
@@ -96,9 +95,9 @@
                                 (click)="handleAddToCart(product)"
                                 class="mdl-button mdl-js-button mdl-button--fab theme-sbg-h"
                                 data-upgraded=",MaterialButton">
-                          <i class="material-icons">add_shopping_cart</i>
+                          <i class="fa fa-cart-plus" aria-hidden="true"></i>
                         </button>
-                      </form>
+                      </div>
                       <link itemprop="availability" href="http://schema.org/InStock">
                       <ul class="additional-buttons list-inline float-none clearfix">
                         <li class="favourite-item">
@@ -116,14 +115,17 @@
               </ul>
               <div class="block text-center lazyloading-paging" data-times="5"
                    data-link-text="Загрузить еще" data-loading-str="Загрузка...">
-                <ul class="md-pagination">
-                  <li class="selected"><a href="/category/category_26/">1</a></li>
-                  <li><a href="/category/category_26/?page=2">2</a></li>
-                  <li><span>...</span></li>
-                  <li><a href="/category/category_26/?page=7">7</a></li>
-                  <li><a class="inline-link" href="/category/category_26/?page=2"><i
-                    class="material-icons">chevron_right</i></a></li>
-                </ul>
+                <!--<ul class="md-pagination">-->
+                  <!--<li class="selected"><a href="/category/category_26/">1</a></li>-->
+                  <!--<li><a href="/category/category_26/?page=2">2</a></li>-->
+                  <!--<li><span>...</span></li>-->
+                  <!--<li><a href="/category/category_26/?page=7">7</a></li>-->
+                  <!--<li>-->
+                    <!--<a class="inline-link" href="/category/category_26/?page=2">-->
+                      <!--<i class="fa fa-chevron-right" aria-hidden="true"></i>-->
+                    <!--</a>-->
+                  <!--</li>-->
+                <!--</ul>-->
               </div>
             </div>
           </div>

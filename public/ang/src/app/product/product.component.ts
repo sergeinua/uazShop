@@ -39,7 +39,7 @@ export class ProductComponent implements OnInit {
   }
 
   handleAddToCart() {
-    this.store.dispatch(new cartActions.CartProductAddAction({item: this.product, quantity: this.quantity}));
+    this.store.dispatch(new cartActions.CartProductAddAction({ item: this.product, quantity: this.quantity }));
   }
 
   handleIncreaseQuan() {

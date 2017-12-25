@@ -16,19 +16,10 @@ export class HomeComponent implements OnInit {
   categories: any[];
 
   constructor(private appService: AppService, private store: Store<rootReducer.State>) {
-    store.select(rootReducer.getCategoriesForHomePage).subscribe(resp => this.categories = resp);
+    store.select(rootReducer.getCategories).subscribe(resp => this.categories = resp);
   }
 
   ngOnInit() {
-    this.store.dispatch(new loaderActions.LoaderSetStateAction(true));
-    this.appService.getCategoriesForHomePage().subscribe(
-      (resp) => {
-        this.store.dispatch(new categoryActions.CategoriesHomePageLoadedAction(resp));
-        this.store.dispatch(new loaderActions.LoaderSetStateAction(false));
-      },
-      (err) => {
-        this.store.dispatch(new loaderActions.LoaderSetStateAction(false));
-      }
-    )
+
   }
 }

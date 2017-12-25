@@ -56,7 +56,7 @@ export const getLoaderState = (state: State) => state.loader;
 export const loaderIsVisible = createSelector(getLoaderState, fromLoader.getLoaderState);
 
 export const getCategoryState = (state: State) => state.category;
-export const getCategoriesForHomePage = createSelector(getCategoryState, fromCategory.getCategoriesForHomePage);
+export const getCategories = createSelector(getCategoryState, fromCategory.getCategories);
 export const getCategoryData = createSelector(getCategoryState, fromCategory.getCategoryData);
 export const getCategoryProducts = createSelector(getCategoryState, fromCategory.getProducts);
 

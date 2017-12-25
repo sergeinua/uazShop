@@ -4,7 +4,7 @@ var path = require('path');
 var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('models/db.db');
 
-router.get('/api/category/home', function (req, res, err) {
+router.get('/api/category', function (req, res, err) {
     db.all('select * from category', function(err, row){
         res.status(200).send(JSON.stringify(row));
     });

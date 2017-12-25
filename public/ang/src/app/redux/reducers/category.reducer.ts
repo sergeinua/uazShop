@@ -1,13 +1,13 @@
 import * as categoryActions from '../actions/category.actions';
 
 export interface State {
-  homePageList: any[];
+  list: any[];
   categoryData: any;
   products: any[];
 }
 
 const initialState: State = {
-  homePageList: [],
+  list: [],
   categoryData: null,
   products: []
 };
@@ -15,9 +15,9 @@ const initialState: State = {
 export function reducer(state = initialState, action: categoryActions.Actions): State {
   switch(action.type) {
 
-    case categoryActions.CATEGORIES_HOME_PAGE_LOADED: {
+    case categoryActions.CATEGORY_LIST_LOADED: {
       return Object.assign({}, state, {
-        homePageList: action.payload
+        list: action.payload
       });
     }
 
@@ -39,6 +39,6 @@ export function reducer(state = initialState, action: categoryActions.Actions): 
   }
 }
 
-export const getCategoriesForHomePage = (state: State) => state.homePageList;
+export const getCategories = (state: State) => state.list;
 export const getCategoryData = (state: State) => state.categoryData;
 export const getProducts = (state: State) => state.products;

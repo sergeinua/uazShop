@@ -8,8 +8,8 @@ export class AppService {
 
   }
 
-  getCategoriesForHomePage(): Observable<any> {
-    return this.http.get('/api/category/home');
+  getCategories(): Observable<any> {
+    return this.http.get('/api/category');
   }
 
   getCategoryProducts(categoryId): Observable<any> {

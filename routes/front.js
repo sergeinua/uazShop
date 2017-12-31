@@ -1,8 +1,8 @@
-let express = require('express');
-let router = express.Router();
-let path = require('path');
-let sqlite3 = require('sqlite3').verbose();
-let db = new sqlite3.Database('models/db.db');
+let express = require('express'),
+    router = express.Router(),
+    path = require('path'),
+    sqlite3 = require('sqlite3').verbose(),
+    db = new sqlite3.Database('models/db.db');
 
 router.get('/api/category', (req, res, err) => {
     db.all('select * from category', (err, row) => {

@@ -14,6 +14,7 @@ import { AppService } from '../../core/app.service';
 })
 export class HeaderComponent implements OnInit {
   categories: any[];
+  menuVisible: boolean = false;
 
   constructor(private store: Store<rootReducer.State>, private appService: AppService) {
     store.select(rootReducer.getCategories).subscribe(resp => this.categories = resp);

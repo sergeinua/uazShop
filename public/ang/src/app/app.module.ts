@@ -4,6 +4,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { HttpClientModule } from '@angular/common/http';
+import { GrowlModule } from 'primeng/primeng';
 
 import { environment } from '../environments/environment';
 import { reducers } from './redux/reducers/app.reducer';
@@ -17,6 +18,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { AppService } from './core/app.service';
 import { CartComponent } from './shared/header/cart/cart.component';
+import { MessageComponent } from './shared/message/message.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { CartComponent } from './shared/header/cart/cart.component';
     FooterComponent,
     LoaderComponent,
     CartComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +56,7 @@ import { CartComponent } from './shared/header/cart/cart.component';
      */
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     HttpClientModule,
+    GrowlModule,
     HomeModule
   ],
   providers: [ AppService ],
